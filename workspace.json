@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "projects": {
+    "locations": "apps/locations",
+    "locations-e2e": "apps/locations-e2e",
+    "menu": "apps/menu",
+    "menu-e2e": "apps/menu-e2e",
+    "order": "apps/order",
+    "order-e2e": "apps/order-e2e",
+    "shell": "apps/shell",
+    "shell-e2e": "apps/shell-e2e"
+  }
+}

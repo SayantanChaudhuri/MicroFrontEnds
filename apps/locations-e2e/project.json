@@ -1,0 +1,28 @@
+{
+  "root": "apps/locations-e2e",
+  "sourceRoot": "apps/locations-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/locations-e2e/cypress.json",
+        "devServerTarget": "locations:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "locations:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/locations-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["locations"]
+}
