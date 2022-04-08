@@ -1,4 +1,17 @@
+# Commands
 
+``
+npx create-nx-workspace@latest --name micro-front-ends --preset empty --nx-cloud false
+cd micro-front-ends
+npm install --save-dev @nrwl/angular
+npx nx generate @nrwl/angular:app shell --mfe --mfeType host --style scss --routing true
+npx nx generate @nrwl/angular:app locations --mfe --mfeType remote --port 4201 --host shell --style scss --routing true
+npx nx generate @nrwl/angular:app menu --mfe --mfeType remote --port 4202 --host shell --style scss --routing true
+npx nx generate @nrwl/angular:app order --mfe --mfeType remote --port 4203 --host shell --style scss --routing true
+
+npx nx run shell:serve-mfe
+
+``
 
 # MicroFrontEnds
 
